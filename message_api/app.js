@@ -1,8 +1,18 @@
 const express = require('express');
+const morgan = require('morgan');
 const app = express();
+const messageRoutes = require('./routes/messages');
+const bodyParser = require('body-parser');
 
-app.get('/', (req, res) => res.send('hello world'));
+app.use(morgan('dev'));
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
+app.use('/messages', messageRoutes);
 
-app.listen(3000, () => {
-  console.log('My REST API running on port 3000');
-});
+app.use((req, res, next) => {
+  const error = new Error('Not found');
+  error.status = 404;
+  next(error);
+})
+
+module.exports = app;
