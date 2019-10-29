@@ -1,7 +1,7 @@
 const express = require('express');
 const morgan = require('morgan');
 const app = express();
-const messageRoutes = require('./routes/messages');
+const messageRoutes = require('./routes/messages.js');
 const bodyParser = require('body-parser');
 
 app.use(morgan('dev'));
