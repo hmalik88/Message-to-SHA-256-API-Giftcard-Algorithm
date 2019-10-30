@@ -10,14 +10,14 @@ const itemsArr = data.map(item => {
 
 
 const findPair = (items, balance) => {
-  let max = Infinity;
+  let diff = Infinity;
   const indices = [];
   for (let i = 0; i < items.length; i++) {
     for (let j = i + 1; j < items.length; j++) {
       const sum = items[i][1] + items[j][1]
       const proximity = Math.abs(sum - balance);
-      if (proximity <= max) {
-        max = proximity;
+      if (proximity <= diff) {
+        diff = proximity;
         if (sum <= balance) {
           indices[0] = i;
           indices[1] = j;
