@@ -4,7 +4,7 @@ const CryptoJS = require('crypto-js');
 const hashes = {};
 
 router.post('/', (req, res, next) => {
-  const sha256 = CryptoJS.SHA256(req.message).toString(CryptoJS.enc.Hex);
+  const sha256 = CryptoJS.SHA256(req.body.message).toString(CryptoJS.enc.Hex);
   hashes[sha256] = req.body.message;
   res.status(200).json({
     digest: sha256
