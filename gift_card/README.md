@@ -10,6 +10,8 @@ A small program that takes a .txt file from the local directory which has items 
 
 3. You can run the program with the following command: node giftcard.js prices.txt *price*, where *price* is a number amount.
 
+4. You may open up the prices.txt file to add/remove/edit items and prices to your liking.
+
 ### Testing
 
 
