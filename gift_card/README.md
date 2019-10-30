@@ -8,7 +8,7 @@ A small program that takes a .txt file from the local directory which has items 
 
 2. Run npm install.
 
-3. You can run the program with the following command: node giftcard.js prices.txt *price*, where price is a number amount.
+3. You can run the program with the following command: node giftcard.js prices.txt *price*, where *price* is a number amount.
 
 ## Testing
 
