@@ -17,6 +17,10 @@ A small micro-service where you turn a message into a sha256 hash and vice versa
 
 6. In order to stop the container from running you can run docker stop <name|id> and then docker rm <name|id> to remove the container.
 
+### Testing
+
+1. You can pull down the repository if you choose, run npm install and then npm test to run Mocha/Chai tests.
+
 
 ### Scaling Question
 
