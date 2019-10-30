@@ -1,7 +1,6 @@
-const fileName = process.argv[2];
 const cardBalance = parseInt(process.argv[3]);
 const fs = require('fs');
-const data = fs.readFileSync(fileName).toString().split('\n')
+const data = fs.readFileSync('prices.txt').toString().split('\n')
 data.pop();
 const itemsArr = data.map(item => {
   const itemAndPrice = item.split(', ');
@@ -32,9 +31,14 @@ const printPair = (items, balance) => {
   let [first, second] = findPair(items, balance)
   if (!first && first !== 0 || !second) {
     console.log('Not possible');
+    return 'Not possible';
   } else {
     console.log(`${items[first][0]} ${items[first][1]}, ${items[second][0]} ${items[second][1]}`);
+    return `${items[first][0]} ${items[first][1]}, ${items[second][0]} ${items[second][1]}`;
   }
 }
 
 printPair(itemsArr, cardBalance);
+
+module.exports.printPair = printPair;
+module.exports.items = itemsArr;
