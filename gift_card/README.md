@@ -16,8 +16,3 @@ A small program that takes a .txt file from the local directory which has items 
 
 1. Once you have the repository cloned down, you can cd into the gift_card directory and run *npm test*
 
-
-
-Q - What is the Big O notation for your program?
-
-A - The Big O for this program is O(n^2). 
