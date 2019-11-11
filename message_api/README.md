@@ -24,16 +24,3 @@ A small micro-service where you turn a message into a sha256 hash and vice versa
 ### Testing
 
 1. You can pull down the repository if you choose, run npm install and then npm test to run Mocha/Chai tests.
-
-### Scaling Question
-
-Q - What would the bottleneck(s) be in your implementation as you acquire more users? How you might scale your
-microservice?
-
-A - The bottlenecks would be the traffic to the one container, where the api wouldn't be able to handle all the requests at max throughput. You can scale your service by spinning up more docker containers, once you can't spin up more containers you would potentially look to add more nodes to your cluster.
-
-### Deployment Question
-
-Q - How would you improve your deployment process if you needed to maintain this application long term? 
-
-A - I would improve my deployment process by using a orchestration engine like Kubernetes to manage my containers and use tools like Prometheus and Istio for logging/debugging of my kubernetes clusters.
